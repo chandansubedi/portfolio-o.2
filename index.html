@@ -274,7 +274,7 @@
         }
 
         .gradient-bg {
-            background: var(--gradient-subtle);
+            background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 50%, #EFF6FF 100%);
             border-radius: 24px;
             position: relative;
             overflow: hidden;
@@ -1219,55 +1219,100 @@
         <header class="w-full mx-auto mb-8 sm:mb-16 fade-in">
             <div class="card glass-card p-6 sm:p-8 overflow-hidden relative">
                 <div class="gradient-bg p-4 sm:p-6 md:p-10 relative z-10">
-                    <div class="flex flex-col sm:flex-row items-center">
-                        <div class="mb-6 sm:mb-0 sm:mr-12">
-                            <div class="relative float-animation">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-br from-blue-400 to-sky-600 rounded-full opacity-20 blur-sm hover-glow">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
+                        <!-- Profile Section -->
+                        <div
+                            class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-6 sm:gap-8 flex-1">
+                            <div class="flex-shrink-0">
+                                <div class="relative float-animation">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-br from-blue-400 to-sky-600 rounded-full opacity-20 blur-sm hover-glow">
+                                    </div>
+                                    <img class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-white shadow-lg relative z-10 transition-transform duration-300 hover:scale-105"
+                                        src="https://avatars.githubusercontent.com/u/91006374?v=4"
+                                        alt="Chandan Subedi - Backend Developer from Nepal" itemprop="image">
                                 </div>
-                                <img class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-white shadow-lg relative z-10 transition-transform duration-300 hover:scale-105"
-                                    src="https://avatars.githubusercontent.com/u/91006374?v=4"
-                                    alt="Chandan Subedi - Backend Developer from Nepal" itemprop="image">
+                            </div>
+                            <div class="text-center sm:text-left lg:text-left">
+                                <div class="mb-2">
+                                    <span class="text-xs uppercase tracking-wider text-blue-600 font-semibold">Software
+                                        Developer</span>
+                                </div>
+                                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3 letter-spacing-wide gradient-text"
+                                    itemprop="name">
+                                    Chandan Subedi
+                                </h1>
+                                <div class="text-lg sm:text-xl text-gray-600 mb-4 sm:mb-6 font-light tracking-wide">
+                                    <span class="mono-font">$</span> <span id="typingText"
+                                        class="mono-font text-green-600 font-medium"></span><span
+                                        class="animate-pulse">|</span>
+                                </div>
+                                <p class="text-base text-gray-500 mb-4">Backend Developer & Data Analyst</p>
+                                <div
+                                    class="flex flex-wrap justify-center sm:justify-start lg:justify-start gap-1 sm:gap-2 mb-4">
+                                    <span
+                                        class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Django</span>
+                                    <span
+                                        class="skill-tag bg-green-100 text-green-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Python</span>
+                                    <span
+                                        class="skill-tag bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">PostgreSQL</span>
+                                    <span
+                                        class="skill-tag bg-red-100 text-red-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Power
+                                        BI</span>
+                                    <span
+                                        class="skill-tag bg-pink-100 text-pink-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Generative
+                                        AI</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col sm:flex-row justify-center sm:justify-start lg:justify-start space-y-2 sm:space-y-0 sm:space-x-3">
+                                    <a href="#contact" class="btn btn-primary text-center">
+                                        <i class="fas fa-envelope mr-2"></i> Contact Me
+                                    </a>
+                                    <a href="#projects" class="btn btn-outline text-center">
+                                        <i class="fas fa-code-branch mr-2"></i> View Projects
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center sm:text-left">
-                            <div class="mb-2">
-                                <span class="text-xs uppercase tracking-wider text-blue-600 font-semibold">Software
-                                    Developer</span>
-                            </div>
-                            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3 letter-spacing-wide gradient-text"
-                                itemprop="name">
-                                Chandan Subedi
-                            </h1>
-                            <div class="text-lg sm:text-xl text-gray-600 mb-4 sm:mb-6 font-light tracking-wide">
-                                <span class="mono-font">$</span> <span id="typingText"
-                                    class="mono-font text-green-600 font-medium"></span><span
-                                    class="animate-pulse">|</span>
-                            </div>
-                            <p class="text-base text-gray-500 mb-4">Backend Developer & Data Analyst</p>
-                            <div class="flex flex-wrap justify-center sm:justify-start gap-1 sm:gap-2 mb-4">
-                                <span
-                                    class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Django</span>
-                                <span
-                                    class="skill-tag bg-green-100 text-green-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Python</span>
-                                <span
-                                    class="skill-tag bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">PostgreSQL</span>
-                                <span
-                                    class="skill-tag bg-red-100 text-red-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Power
-                                    BI</span>
-                                <span
-                                    class="skill-tag bg-pink-100 text-pink-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Generative
-                                    AI</span>
-                            </div>
 
-                            <div
-                                class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-3">
-                                <a href="#contact" class="btn btn-primary text-center">
-                                    <i class="fas fa-envelope mr-2"></i> Contact Me
-                                </a>
-                                <a href="#projects" class="btn btn-outline text-center">
-                                    <i class="fas fa-code-branch mr-2"></i> View Projects
-                                </a>
+                        <!-- Terminal Section -->
+                        <div class="flex-shrink-0 w-full lg:w-auto lg:max-w-md">
+                            <div class="bg-gray-800 dark:bg-gray-900 p-3 sm:p-4 rounded-lg shadow-lg">
+                                <div class="flex items-center space-x-2 mb-3">
+                                    <div class="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
+                                    <div class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
+                                    <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                                    <span class="text-gray-400 text-xs ml-3 mono-font">terminal — csubedi@dev</span>
+                                </div>
+                                <div class="mono-font text-xs sm:text-sm overflow-hidden">
+                                    <div class="text-green-400 mb-1.5">
+                                        <span class="text-gray-400">csubedi@dev:~$ </span>whoami
+                                    </div>
+                                    <div class="text-white mb-3 text-xs sm:text-sm">Backend Engineer | AI Solutions
+                                        Developer | Data
+                                        Analyst</div>
+                                    <div class="text-green-400 mb-1.5">
+                                        <span class="text-gray-400">csubedi@dev:~$ </span>cat experience.json
+                                    </div>
+                                    <div class="text-white space-y-0.5 text-xs sm:text-sm">
+                                        <div><span class="text-blue-400">{</span></div>
+                                        <div class="pl-3"><span class="text-yellow-400">"experience"</span>: <span
+                                                class="text-green-400">"1+ years"</span>,</div>
+                                        <div class="pl-3"><span class="text-yellow-400">"focus"</span>: <span
+                                                class="text-green-400">"scalable systems & AI solutions"</span>,</div>
+                                        <div class="pl-3"><span class="text-yellow-400">"architecture"</span>: <span
+                                                class="text-green-400">"microservices, distributed systems"</span>,
+                                        </div>
+                                        <div class="pl-3"><span class="text-yellow-400">"specialization"</span>: <span
+                                                class="text-green-400">"generative AI,Data Analytics"</span></div>
+                                        <div><span class="text-blue-400">}</span></div>
+                                    </div>
+                                    <div class="text-green-400 mt-3">
+                                        <span class="text-gray-400">csubedi@dev:~$ </span><span
+                                            class="animate-pulse">_</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1282,466 +1327,425 @@
                     style="background: var(--gradient-subtle);"></div>
             </div>
         </header>
+        </section>
 
-        <!-- Main Content -->
-        <main class="w-full mx-auto space-y-6 sm:space-y-8 md:space-y-12">
+        <!-- About Me Section -->
+        <section id="about" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up" itemprop="description">
+            <!-- Decorative element -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-20 blur-lg"
+                style="background: var(--gradient-primary);"></div>
 
-            <!-- Terminal Component -->
-            <section class="card glass-card p-0 relative slide-up overflow-hidden">
-                <div class="bg-gray-800 dark:bg-gray-900 p-4 rounded-t-lg">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <span class="text-gray-400 text-sm ml-4 mono-font">terminal — csubedi@dev</span>
-                    </div>
-                    <div class="mono-font text-sm">
-                        <div class="text-green-400 mb-2">
-                            <span class="text-gray-400">csubedi@dev:~$ </span>whoami
-                        </div>
-                        <div class="text-white mb-4">Backend Engineer | AI Solutions Developer | Data
-                            Analyst</div>
-                        <div class="text-green-400 mb-2">
-                            <span class="text-gray-400">csubedi@dev:~$ </span>cat experience.json
-                        </div>
-                        <div class="text-white space-y-1">
-                            <div><span class="text-blue-400">{</span></div>
-                            <div class="pl-4"><span class="text-yellow-400">"experience"</span>: <span
-                                    class="text-green-400">"1+ years"</span>,</div>
-                            <div class="pl-4"><span class="text-yellow-400">"focus"</span>: <span
-                                    class="text-green-400">"scalable systems & AI solutions"</span>,</div>
-                            <div class="pl-4"><span class="text-yellow-400">"architecture"</span>: <span
-                                    class="text-green-400">"microservices, distributed systems"</span>,</div>
-                            <div class="pl-4"><span class="text-yellow-400">"specialization"</span>: <span
-                                    class="text-green-400">"generative AI,Data Analytics"</span></div>
-                            <div><span class="text-blue-400">}</span></div>
-                        </div>
-                        <div class="text-green-400 mt-4">
-                            <span class="text-gray-400">csubedi@dev:~$ </span><span class="animate-pulse">_</span>
-                        </div>
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-sky-600 text-white">
+                        <i class="fas fa-user"></i>
                     </div>
                 </div>
-            </section>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">About Me</h2>
+            </div>
 
-            <!-- About Me Section -->
-            <section id="about" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up" itemprop="description">
-                <!-- Decorative element -->
-                <div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-20 blur-lg"
-                    style="background: var(--gradient-primary);"></div>
-
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-sky-600 text-white">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">About Me</h2>
-                </div>
-
-                <div class="relative z-10" itemscope itemtype="https://schema.org/Person">
-                    <p class="text-gray-700 leading-relaxed text-base sm:text-lg font-light mb-4">
-                        Highly motivated tech enthusiast with a strong background in data analysis, including EDA, data
-                        preprocessing, and data cleaning.
-                        Passionate about transforming raw data into actionable insights and building intelligent
-                        dashboards for better decision-making.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed text-base sm:text-lg font-light mb-4">
-                        Skilled in creating interactive <span class="font-medium text-blue-700">Power BI
-                            dashboards</span> and robust backend systems using <span itemprop="jobTitle"
-                            class="font-medium text-blue-700">Django</span>.
-                        Based in <span itemprop="homeLocation" class="font-medium text-blue-700">Pokhara, Nepal</span>,
-                        I focus on developing scalable, maintainable solutions that combine data analytics with
-                        efficient backend architecture.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed text-base sm:text-lg font-light">
-                        Continuously exploring new technologies and tools to enhance data workflows and backend
-                        performance, aiming to bridge the gap between data-driven insights and real-world applications.
-                    </p>
-                </div>
-            </section>
+            <div class="relative z-10" itemscope itemtype="https://schema.org/Person">
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg font-light mb-4">
+                    Highly motivated tech enthusiast with a strong background in data analysis, including EDA, data
+                    preprocessing, and data cleaning.
+                    Passionate about transforming raw data into actionable insights and building intelligent
+                    dashboards for better decision-making.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg font-light mb-4">
+                    Skilled in creating interactive <span class="font-medium text-blue-700">Power BI
+                        dashboards</span> and robust backend systems using <span itemprop="jobTitle"
+                        class="font-medium text-blue-700">Django</span>.
+                    Based in <span itemprop="homeLocation" class="font-medium text-blue-700">Pokhara, Nepal</span>,
+                    I focus on developing scalable, maintainable solutions that combine data analytics with
+                    efficient backend architecture.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg font-light">
+                    Continuously exploring new technologies and tools to enhance data workflows and backend
+                    performance, aiming to bridge the gap between data-driven insights and real-world applications.
+                </p>
+            </div>
+        </section>
 
 
-            <!-- Skills Section -->
-            <section id="skills" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
-                <!-- Decorative element -->
-                <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full opacity-20 blur-lg"
-                    style="background: var(--gradient-secondary);"></div>
+        <!-- Skills Section -->
+        <section id="skills" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
+            <!-- Decorative element -->
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full opacity-20 blur-lg"
+                style="background: var(--gradient-secondary);"></div>
 
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-green-500 to-teal-500 text-white">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Technical Skills</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 relative z-10">
-                    <!-- Backend -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
-                            <i class="fas fa-server mr-2 sm:mr-3 text-blue-500"></i>
-                            Backend Development
-                        </h3>
-                        <ul class="space-y-2 sm:space-y-3">
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">Django Web Framework</span>
-                            </li>
-
-
-
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">Performance Optimization</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Database -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
-                            <i class="fas fa-database mr-2 sm:mr-3 text-purple-500"></i>
-                            Database Systems
-                        </h3>
-                        <ul class="space-y-2 sm:space-y-3">
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">PostgreSQL</span>
-                            </li>
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">MySQL</span>
-                            </li>
-
-                        </ul>
-                    </div>
-
-
-
-                    <!-- DevOps -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
-                            <i class="fas fa-cloud mr-2 sm:mr-3 text-yellow-500"></i>
-                            DevOps & Cloud
-                        </h3>
-                        <ul class="space-y-2 sm:space-y-3">
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">Git & GitHub Actions</span>
-                            </li>
-
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">CI/CD Pipelines</span>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <!-- Other Skills -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
-                            <i class="fas fa-tools mr-2 sm:mr-3 text-red-500"></i>
-                            Specialized Skills
-                        </h3>
-                        <ul class="space-y-2 sm:space-y-3">
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">Data Preprocessing</span>
-                            </li>
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">Power BI</span>
-                            </li>
-                            <li class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-check text-xs"></i>
-                                </div>
-                                <span class="skill-text text-sm sm:text-base">Tableau</span>
-                            </li>
-
-                        </ul>
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-green-500 to-teal-500 text-white">
+                        <i class="fas fa-code"></i>
                     </div>
                 </div>
-            </section>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Technical Skills</h2>
+            </div>
 
-            <!-- Experience Section -->
-            <section id="experience" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
-                <!-- Decorative element -->
-                <div class="absolute -top-6 -left-6 w-24 h-24 bg-teal-50 rounded-full opacity-30 blur-lg"></div>
-
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-red-500 to-orange-500 text-white">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Work Experience</h2>
-                </div>
-
-                <div class="space-y-5 sm:space-y-8 relative z-10">
-                    <!-- Experience 1: pravidhi innovations -->
-                    <div class="experience-item bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                            <div class="mb-2 sm:mb-0">
-                                <div class="flex items-center mb-1">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
-                                        <i class="fas fa-building text-teal-600 text-xs"></i>
-                                    </div>
-                                    <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800">Software
-                                        Developer</h3>
-                                </div>
-                                <p class="text-gray-600 text-sm sm:text-base ml-8">Pravidhi Innovations - Pokhara, Nepal
-                                </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 relative z-10">
+                <!-- Backend -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
+                        <i class="fas fa-server mr-2 sm:mr-3 text-blue-500"></i>
+                        Backend Development
+                    </h3>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
                             </div>
-                            <p
-                                class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">
-                                Nov 2025 – Present</p>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed text-sm sm:text-base font-light mt-2 ml-8">
-                            Working on developing a scalable multi-tenant SaaS platform with secure authentication,
-                            RESTful APIs, and hardware integration.
-
-                        </p>
-                    </div>
+                            <span class="skill-text text-sm sm:text-base">Django Web Framework</span>
+                        </li>
 
 
-                    <!-- Experience 2: XTen IT -->
-                    <div class="experience-item bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                            <div class="mb-2 sm:mb-0">
-                                <div class="flex items-center mb-1">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
-                                        <i class="fas fa-building text-teal-600 text-xs"></i>
-                                    </div>
-                                    <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800">Backend
-                                        Developer Intern</h3>
-                                </div>
-                                <p class="text-gray-600 text-sm sm:text-base ml-8">XTen IT - Pokhara, Nepal</p>
+
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
                             </div>
-                            <p
-                                class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">
-                                May 2025 – nov 2025</p>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed text-sm sm:text-base font-light mt-2 ml-8">
-                            Worked as a full-stack developer on an event booking website using Django, and contributed
-                            to the backend development of an inventory and product management application.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
-                <!-- Decorative element -->
-                <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-indigo-50 rounded-full opacity-30 blur-lg"></div>
-
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Education</h2>
+                            <span class="skill-text text-sm sm:text-base">Performance Optimization</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="space-y-5 sm:space-y-8 relative z-10">
-                    <!-- Education 1 -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
-                            <div class="mb-4 sm:mb-0">
-                                <div class="flex items-center mb-2">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
-                                        <i class="fas fa-university text-indigo-600 text-xs"></i>
-                                    </div>
-                                    <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800 break-words">
-                                        Bachelor of Information Technology</h3>
-                                </div>
-                                <p class="text-gray-600 text-sm sm:text-base ml-8">Gandaki University</p>
+                <!-- Database -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
+                        <i class="fas fa-database mr-2 sm:mr-3 text-purple-500"></i>
+                        Database Systems
+                    </h3>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
                             </div>
-                            <p
-                                class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">
-                                August 2021 – September 2025</p>
-                        </div>
-                        <ul class="mt-5 space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700 ml-8">
-                            <li class="flex items-start">
+                            <span class="skill-text text-sm sm:text-base">PostgreSQL</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="skill-text text-sm sm:text-base">MySQL</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+                <!-- DevOps -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
+                        <i class="fas fa-cloud mr-2 sm:mr-3 text-yellow-500"></i>
+                        DevOps & Cloud
+                    </h3>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="skill-text text-sm sm:text-base">Git & GitHub Actions</span>
+                        </li>
+
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="skill-text text-sm sm:text-base">CI/CD Pipelines</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Other Skills -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-700 flex items-center font-serif mb-4">
+                        <i class="fas fa-tools mr-2 sm:mr-3 text-red-500"></i>
+                        Specialized Skills
+                    </h3>
+                    <ul class="space-y-2 sm:space-y-3">
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="skill-text text-sm sm:text-base">Data Preprocessing</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="skill-text text-sm sm:text-base">Power BI</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="skill-text text-sm sm:text-base">Tableau</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
+            <!-- Decorative element -->
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-teal-50 rounded-full opacity-30 blur-lg"></div>
+
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-red-500 to-orange-500 text-white">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Work Experience</h2>
+            </div>
+
+            <div class="space-y-5 sm:space-y-8 relative z-10">
+                <!-- Experience 1: pravidhi innovations -->
+                <div class="experience-item bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                        <div class="mb-2 sm:mb-0">
+                            <div class="flex items-center mb-1">
                                 <div
-                                    class="w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                    <i class="fas fa-check text-white text-xs"></i>
+                                    class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
+                                    <i class="fas fa-building text-teal-600 text-xs"></i>
                                 </div>
-                                <span>Projects on Web Development, wireless communication , Algorithms, Database
-                                    Design</span>
-                            </li>
-
-
-                        </ul>
-                    </div>
-
-                    <!-- Education 2 -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
-                            <div class="mb-4 sm:mb-0">
-                                <div class="flex items-center mb-2">
-                                    <div
-                                        class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
-                                        <i class="fas fa-school text-indigo-600 text-xs"></i>
-                                    </div>
-                                    <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800">Grade VI</h3>
-                                </div>
-                                <p class="text-gray-600 text-sm sm:text-base ml-8">Laboratory College</p>
+                                <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800">Software
+                                    Developer</h3>
                             </div>
-                            <!-- <p class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">April 2010 – May 2017</p> -->
+                            <p class="text-gray-600 text-sm sm:text-base ml-8">Pravidhi Innovations - Pokhara, Nepal
+                            </p>
                         </div>
-                        <p class="mt-3 text-sm sm:text-base text-gray-700 ml-8">Kirtipur, Kathmandu, Nepal</p>
+                        <p
+                            class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">
+                            Nov 2025 – Present</p>
                     </div>
-                </div>
-            </section>
+                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base font-light mt-2 ml-8">
+                        Working on developing a scalable multi-tenant SaaS platform with secure authentication,
+                        RESTful APIs, and hardware integration.
 
-
-            <!-- Blogging Section -->
-            <section id="writing" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
-                <!-- Decorative element -->
-                <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-50 rounded-full opacity-30 blur-lg"></div>
-
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-blue-600 text-white">
-                            <i class="fas fa-pen"></i>
-                        </div>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Writing & Contributions
-                    </h2>
+                    </p>
                 </div>
 
-                <div class="space-y-4 relative z-10">
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50 hover:shadow-md transition-all">
-                        <div class="flex items-center mb-4">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                                <i class="fas fa-file-alt text-blue-600"></i>
+
+                <!-- Experience 2: XTen IT -->
+                <div class="experience-item bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                        <div class="mb-2 sm:mb-0">
+                            <div class="flex items-center mb-1">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center mr-2 flex-shrink-0">
+                                    <i class="fas fa-building text-teal-600 text-xs"></i>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800">Backend
+                                    Developer Intern</h3>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-serif font-semibold text-gray-800"> Blogs</h3>
+                            <p class="text-gray-600 text-sm sm:text-base ml-8">XTen IT - Pokhara, Nepal</p>
                         </div>
-                        <p class="text-sm sm:text-base text-gray-700 mb-5 ml-13">I write articles about new idea and
-                            related technologies on my personal blog.</p>
-                        <a href="https://write.csubedi.com.np" target="_blank"
-                            class="btn btn-primary inline-flex items-center text-sm sm:text-base ml-13">
-                            <i class="fas fa-external-link-alt mr-2"></i> Visit Blog
-                            <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        <p
+                            class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">
+                            May 2025 – nov 2025</p>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base font-light mt-2 ml-8">
+                        Worked as a full-stack developer on an event booking website using Django, and contributed
+                        to the backend development of an inventory and product management application.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
+            <!-- Decorative element -->
+            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-indigo-50 rounded-full opacity-30 blur-lg"></div>
+
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Education</h2>
+            </div>
+
+            <div class="space-y-5 sm:space-y-8 relative z-10">
+                <!-- Education 1 -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                        <div class="mb-4 sm:mb-0">
+                            <div class="flex items-center mb-2">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                                    <i class="fas fa-university text-indigo-600 text-xs"></i>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800 break-words">
+                                    Bachelor of Information Technology</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-8">Gandaki University</p>
+                        </div>
+                        <p
+                            class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">
+                            August 2021 – September 2025</p>
+                    </div>
+                    <ul class="mt-5 space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700 ml-8">
+                        <li class="flex items-start">
+                            <div
+                                class="w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <span>Projects on Web Development, wireless communication , Algorithms, Database
+                                Design</span>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <!-- Education 2 -->
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                        <div class="mb-4 sm:mb-0">
+                            <div class="flex items-center mb-2">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                                    <i class="fas fa-school text-indigo-600 text-xs"></i>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-serif font-semibold text-gray-800">Grade VI</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-8">Laboratory College</p>
+                        </div>
+                        <!-- <p class="text-gray-500 text-sm sm:text-base italic sm:ml-4 sm:whitespace-nowrap bg-gray-50 rounded-full px-3 py-1">April 2010 – May 2017</p> -->
+                    </div>
+                    <p class="mt-3 text-sm sm:text-base text-gray-700 ml-8">Kirtipur, Kathmandu, Nepal</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Blogging Section -->
+        <section id="writing" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
+            <!-- Decorative element -->
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-50 rounded-full opacity-30 blur-lg"></div>
+
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Writing & Contributions
+                </h2>
+            </div>
+
+            <div class="space-y-4 relative z-10">
+                <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-50 hover:shadow-md transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-file-alt text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-serif font-semibold text-gray-800"> Blogs</h3>
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-700 mb-5 ml-13">I write articles about new idea and
+                        related technologies on my personal blog.</p>
+                    <a href="https://write.csubedi.com.np" target="_blank"
+                        class="btn btn-primary inline-flex items-center text-sm sm:text-base ml-13">
+                        <i class="fas fa-external-link-alt mr-2"></i> Visit Blog
+                        <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
+            <!-- Decorative element -->
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-indigo-50 rounded-full opacity-30 blur-lg"></div>
+
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-500 to-blue-600 text-white">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Featured Projects</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                <!-- sms Project Card -->
+                <div class="project-card bg-white overflow-hidden">
+                    <div class="project-card-header p-4 sm:p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                <i class="fab fa-python text-orange-600"></i>
+                            </div>
+                            <a href="https://sms.csubedi.com.np" target="_blank"
+                                class="text-lg sm:text-xl font-serif font-semibold text-blue-700 hover:underline break-words">Student
+                                Management System</a>
+                        </div>
+                        <p class="text-gray-700 text-sm sm:text-base mb-4">
+                            A smart platform to manage students, courses, teachers, attendance, and departments
+                            efficiently, making academic administration simple and organized.</p>
+                        <div class="flex flex-wrap gap-1 sm:gap-2 mb-4">
+                            <span
+                                class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Python</span>
+                            <span
+                                class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Django</span>
+                            <span
+                                class="skill-tag bg-orange-100 text-orange-700 text-xs font-medium px-2 py-1 rounded-full">Educational</span>
+                            <span
+                                class="skill-tag bg-red-100 text-red-700 text-xs font-medium px-2 py-1 rounded-full">Real-time</span>
+                        </div>
+                        <div class="flex items-center text-xs sm:text-sm text-gray-500">
+                            <div class="flex items-center">
+                                <i class="fas fa-graduation-cap text-gray-400 mr-1"></i>
+                                Educational Software Platform
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer p-3 sm:p-4">
+                        <a href="https://sms.csubedi.com.np" target="_blank"
+                            class="btn btn-primary text-xs sm:text-sm py-1 px-3">
+                            <i class="fas fa-external-link-alt mr-1"></i>
+                            Try SMS
                         </a>
                     </div>
-
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up">
-                <!-- Decorative element -->
-                <div class="absolute -top-6 -left-6 w-24 h-24 bg-indigo-50 rounded-full opacity-30 blur-lg"></div>
-
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-500 to-blue-600 text-white">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Featured Projects</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-                    <!-- sms Project Card -->
-                    <div class="project-card bg-white overflow-hidden">
-                        <div class="project-card-header p-4 sm:p-6">
-                            <div class="flex items-center mb-3">
-                                <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mr-3">
-                                    <i class="fab fa-python text-orange-600"></i>
-                                </div>
-                                <a href="https://sms.csubedi.com.np" target="_blank"
-                                    class="text-lg sm:text-xl font-serif font-semibold text-blue-700 hover:underline break-words">Student
-                                    Management System</a>
+
+
+                <!-- Awesome Django Blogs Project Card -->
+                <div class="project-card bg-white overflow-hidden">
+                    <div class="project-card-header p-4 sm:p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fab fa-python text-blue-600"></i>
                             </div>
-                            <p class="text-gray-700 text-sm sm:text-base mb-4">
-                                A smart platform to manage students, courses, teachers, attendance, and departments
-                                efficiently, making academic administration simple and organized.</p>
-                            <div class="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                                <span
-                                    class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Python</span>
-                                <span
-                                    class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Django</span>
-                                <span
-                                    class="skill-tag bg-orange-100 text-orange-700 text-xs font-medium px-2 py-1 rounded-full">Educational</span>
-                                <span
-                                    class="skill-tag bg-red-100 text-red-700 text-xs font-medium px-2 py-1 rounded-full">Real-time</span>
-                            </div>
-                            <div class="flex items-center text-xs sm:text-sm text-gray-500">
-                                <div class="flex items-center">
-                                    <i class="fas fa-graduation-cap text-gray-400 mr-1"></i>
-                                    Educational Software Platform
-                                </div>
-                            </div>
+                            <a href="https://blog-posting-platform.onrender.com/" target="_blank"
+                                class="text-lg sm:text-xl font-serif font-semibold text-blue-700 hover:underline break-words">Blogs
+                                Application</a>
                         </div>
-                        <div class="project-card-footer p-3 sm:p-4">
-                            <a href="https://sms.csubedi.com.np" target="_blank"
-                                class="btn btn-primary text-xs sm:text-sm py-1 px-3">
-                                <i class="fas fa-external-link-alt mr-1"></i>
-                                Try SMS
-                            </a>
+                        <p class="text-gray-700 text-sm sm:text-base mb-4">
+                            An interactive blogging platform where people can create, edit, and share posts in real
+                            time, with intuitive tools that make publishing easy for both beginners and experienced
+                            writers.
+                        </p>
+                        <div class="flex flex-wrap gap-1 sm:gap-2 mb-4">
+                            <span
+                                class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Django</span>
+                            <span
+                                class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Python</span>
+                            <span
+                                class="skill-tag bg-green-100 text-green-700 text-xs font-medium px-2 py-1 rounded-full">Open
+                                Source</span>
                         </div>
-                    </div>
-
-
-
-                    <!-- Awesome Django Blogs Project Card -->
-                    <div class="project-card bg-white overflow-hidden">
-                        <div class="project-card-header p-4 sm:p-6">
-                            <div class="flex items-center mb-3">
-                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                                    <i class="fab fa-python text-blue-600"></i>
-                                </div>
-                                <a href="https://blog-posting-platform.onrender.com/" target="_blank"
-                                    class="text-lg sm:text-xl font-serif font-semibold text-blue-700 hover:underline break-words">Blogs
-                                    Application</a>
-                            </div>
-                            <p class="text-gray-700 text-sm sm:text-base mb-4">
-                                An interactive blogging platform where people can create, edit, and share posts in real
-                                time, with intuitive tools that make publishing easy for both beginners and experienced
-                                writers.
-                            </p>
-                            <div class="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                                <span
-                                    class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Django</span>
-                                <span
-                                    class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">Python</span>
-                                <span
-                                    class="skill-tag bg-green-100 text-green-700 text-xs font-medium px-2 py-1 rounded-full">Open
-                                    Source</span>
-                            </div>
-                            <!-- <div class="flex items-center text-xs sm:text-sm text-gray-500">
+                        <!-- <div class="flex items-center text-xs sm:text-sm text-gray-500">
                                 <div class="flex items-center mr-4">
                                     <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
                                         <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
@@ -1755,90 +1759,90 @@
                                     27+ Forks
                                 </div>
                             </div> -->
-                        </div>
-                        <div
-                            class="project-card-footer p-3 sm:p-4 flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
-                            <a href="https://blog.csubedi.com.np/" target="_blank"
-                                class="btn btn-primary text-xs sm:text-sm py-1 px-3">
-                                <i class="fas fa-external-link-alt mr-1"></i>
-                                View Site
-                            </a>
-                            <a href="https://github.com/chandansubedi/blog-posting-platform.git" target="_blank"
-                                class="btn btn-outline text-xs sm:text-sm py-1 px-3">
-                                <i class="fab fa-github mr-1"></i>
-                                View Source
-                            </a>
-                        </div>
                     </div>
-
-
-
-                </div>
-            </section>
-
-
-
-
-            <!-- Contact Section -->
-            <section id="contact" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up" itemprop="contactPoint"
-                itemscope itemtype="https://schema.org/ContactPoint">
-                <!-- Decorative element -->
-                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-red-50 rounded-full opacity-30 blur-lg"></div>
-
-                <div class="flex items-center mb-6 sm:mb-8">
-                    <div class="mr-4">
-                        <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-red-500 to-pink-600 text-white">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                    <div
+                        class="project-card-footer p-3 sm:p-4 flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
+                        <a href="https://blog.csubedi.com.np/" target="_blank"
+                            class="btn btn-primary text-xs sm:text-sm py-1 px-3">
+                            <i class="fas fa-external-link-alt mr-1"></i>
+                            View Site
+                        </a>
+                        <a href="https://github.com/chandansubedi/blog-posting-platform.git" target="_blank"
+                            class="btn btn-outline text-xs sm:text-sm py-1 px-3">
+                            <i class="fab fa-github mr-1"></i>
+                            View Source
+                        </a>
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Get In Touch</h2>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-8 relative z-10">
-                    <a href=""
-                        class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
-                        itemprop="email">
-                        <div
-                            class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
-                            <i class="fas fa-envelope text-lg sm:text-xl text-blue-600"></i>
-                        </div>
-                        <span class="block text-gray-800 font-medium font-serif">Email</span>
-                        <span class="text-gray-500 text-xs sm:text-sm break-all"><span class="__cf_email__"
-                                data-cfemail="c9a4a8a0a5a8bba3bca7a8ada1a0a2a8bba089aea4a8a0a5e7aaa6a4">[iamcsubedi@gmail.com]</span></span>
-                    </a>
 
-                    <a href="https://github.com/chandansubedi" target="_blank"
-                        class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                        <div
-                            class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
-                            <i class="fab fa-github text-lg sm:text-xl text-gray-800"></i>
-                        </div>
-                        <span class="block text-gray-800 font-medium font-serif">GitHub</span>
-                        <span class="text-gray-500 text-xs sm:text-sm">@csubedi</span>
-                    </a>
 
-                    <a href="https://www.linkedin.com/in/chandan-subedi-40a391213/" target="_blank"
-                        class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                        <div
-                            class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
-                            <i class="fab fa-linkedin text-lg sm:text-xl text-blue-700"></i>
-                        </div>
-                        <span class="block text-gray-800 font-medium font-serif">LinkedIn</span>
-                        <span class="text-gray-500 text-xs sm:text-sm">Chandan Subedi</span>
-                    </a>
+            </div>
+        </section>
 
-                    <a href="https:/write.csubedi.com.np/" target="_blank"
-                        class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                        <div
-                            class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
-                            <i class="fas fa-blog text-lg sm:text-xl text-pink-600"></i>
-                        </div>
-                        <span class="block text-gray-800 font-medium font-serif">Blog</span>
-                        <span class="text-gray-500 text-xs sm:text-sm">https://write.csubedi.com.np/</span>
-                    </a>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="card glass-card p-5 sm:p-8 md:p-10 relative slide-up" itemprop="contactPoint"
+            itemscope itemtype="https://schema.org/ContactPoint">
+            <!-- Decorative element -->
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-red-50 rounded-full opacity-30 blur-lg"></div>
+
+            <div class="flex items-center mb-6 sm:mb-8">
+                <div class="mr-4">
+                    <div
+                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-red-500 to-pink-600 text-white">
+                        <i class="fas fa-envelope"></i>
+                    </div>
                 </div>
-            </section>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 section-title">Get In Touch</h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-8 relative z-10">
+                <a href=""
+                    class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                    itemprop="email">
+                    <div
+                        class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                        <i class="fas fa-envelope text-lg sm:text-xl text-blue-600"></i>
+                    </div>
+                    <span class="block text-gray-800 font-medium font-serif">Email</span>
+                    <span class="text-gray-500 text-xs sm:text-sm break-all"><span class="__cf_email__"
+                            data-cfemail="c9a4a8a0a5a8bba3bca7a8ada1a0a2a8bba089aea4a8a0a5e7aaa6a4">[iamcsubedi@gmail.com]</span></span>
+                </a>
+
+                <a href="https://github.com/chandansubedi" target="_blank"
+                    class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                    <div
+                        class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                        <i class="fab fa-github text-lg sm:text-xl text-gray-800"></i>
+                    </div>
+                    <span class="block text-gray-800 font-medium font-serif">GitHub</span>
+                    <span class="text-gray-500 text-xs sm:text-sm">@csubedi</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/chandan-subedi-40a391213/" target="_blank"
+                    class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                    <div
+                        class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                        <i class="fab fa-linkedin text-lg sm:text-xl text-blue-700"></i>
+                    </div>
+                    <span class="block text-gray-800 font-medium font-serif">LinkedIn</span>
+                    <span class="text-gray-500 text-xs sm:text-sm">Chandan Subedi</span>
+                </a>
+
+                <a href="https:/write.csubedi.com.np/" target="_blank"
+                    class="contact-item flex flex-col items-center p-3 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                    <div
+                        class="contact-icon w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                        <i class="fas fa-blog text-lg sm:text-xl text-pink-600"></i>
+                    </div>
+                    <span class="block text-gray-800 font-medium font-serif">Blog</span>
+                    <span class="text-gray-500 text-xs sm:text-sm">https://write.csubedi.com.np/</span>
+                </a>
+            </div>
+        </section>
         </main>
 
         <!-- Footer -->
