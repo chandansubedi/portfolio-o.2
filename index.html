@@ -274,7 +274,12 @@
         }
 
         .gradient-bg {
+<<<<<<< HEAD
             background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 50%, #EFF6FF 100%);
+=======
+            /* Header background (light blue) */
+            background: #E0F2FE;
+>>>>>>> 977b355 (final changes)
             border-radius: 24px;
             position: relative;
             overflow: hidden;
@@ -289,6 +294,42 @@
             bottom: 0;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
             border-radius: inherit;
+        }
+
+        /* First-visit intro overlay */
+        .intro-overlay {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 24px;
+        }
+
+        .intro-overlay.is-visible {
+            display: flex;
+        }
+
+        .intro-overlay__text {
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            text-align: center;
+            line-height: 1.05;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+        }
+
+        .intro-overlay.is-hiding {
+            opacity: 0;
+            transition: opacity 450ms ease;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .intro-overlay.is-hiding {
+                transition: none;
+            }
         }
 
         .section-title {
@@ -501,6 +542,22 @@
             overflow: hidden;
         }
 
+        /* Contact section hover: full-card "wrap" (scoped to #contact only) */
+        #contact .contact-item>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        #contact .contact-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-subtle);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 0;
+        }
+
         .contact-item::before {
             content: '';
             position: absolute;
@@ -513,8 +570,12 @@
 
         .contact-item:hover {
             transform: translateY(-6px) scale(1.05);
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(99, 102, 241, 0.2);
+            box-shadow: var(--shadow-lg), 0 0 0 2px rgba(99, 102, 241, 0.18);
+            border-color: rgba(99, 102, 241, 0.28);
+        }
+
+        #contact .contact-item:hover::after {
+            opacity: 1;
         }
 
         .contact-icon {
@@ -526,8 +587,6 @@
 
         .contact-item:hover .contact-icon {
             transform: scale(1.1) rotate(5deg);
-            background: var(--gradient-primary);
-            color: white !important;
         }
 
         /* Skill Item */
@@ -1169,6 +1228,11 @@
 
 <body class="min-h-screen py-12 px-6 sm:px-8 lg:px-12" itemscope itemtype="https://schema.org/ProfilePage">
 
+    <!-- First visit intro overlay -->
+    <div class="intro-overlay" id="introOverlay" role="dialog" aria-modal="true" aria-label="Welcome">
+        <div class="intro-overlay__text">Welcome</div>
+    </div>
+
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
         <div class="py-8 px-4 border-b border-gray-100">
@@ -1318,13 +1382,6 @@
                     </div>
                 </div>
 
-                <!-- Decorative Elements -->
-                <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full opacity-30 blur-xl"
-                    style="background: var(--gradient-primary);"></div>
-                <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-20 blur-xl"
-                    style="background: var(--gradient-secondary);"></div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 rounded-full opacity-10 blur-2xl"
-                    style="background: var(--gradient-subtle);"></div>
             </div>
         </header>
         </section>
@@ -1885,6 +1942,43 @@
     <!-- Form handling JavaScript -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
+            // First-visit intro overlay (black screen with "Welcome")
+            (function handleFirstVisitIntro() {
+                const overlay = document.getElementById('introOverlay');
+                if (!overlay) return;
+
+                const storageKey = 'portfolio_intro_seen_v1';
+                const hasSeen = localStorage.getItem(storageKey) === '1';
+                if (hasSeen) return;
+
+                overlay.classList.add('is-visible');
+
+                const dismiss = () => {
+                    // guard against double-dismiss
+                    if (!overlay.classList.contains('is-visible')) return;
+                    overlay.classList.add('is-hiding');
+                    localStorage.setItem(storageKey, '1');
+
+                    const finish = () => {
+                        overlay.classList.remove('is-visible', 'is-hiding');
+                        overlay.style.display = 'none';
+                        overlay.removeEventListener('transitionend', finish);
+                    };
+
+                    // If reduced motion or transition doesn't fire, still finish.
+                    overlay.addEventListener('transitionend', finish);
+                    window.setTimeout(finish, 650);
+                };
+
+                // Auto-dismiss shortly after showing
+                window.setTimeout(dismiss, 900);
+
+                // Allow manual dismiss
+                overlay.addEventListener('click', dismiss, { once: true });
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') dismiss();
+                }, { once: true });
+            })();
 
             // Typing animation
             const typingElement = document.getElementById('typingText');
