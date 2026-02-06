@@ -274,12 +274,8 @@
         }
 
         .gradient-bg {
-<<<<<<< HEAD
-            background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 50%, #EFF6FF 100%);
-=======
             /* Header background (light blue) */
             background: #E0F2FE;
->>>>>>> 977b355 (final changes)
             border-radius: 24px;
             position: relative;
             overflow: hidden;
@@ -1078,6 +1074,44 @@
             }
         }
 
+        @media (max-width: 960px) {
+
+            /* Force header sections into two separate rows below 16 inches */
+            header .gradient-bg>div {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                display: flex !important;
+            }
+
+            header .gradient-bg>div>div:first-child {
+                width: 100% !important;
+                min-width: 100% !important;
+                flex: 1 1 100% !important;
+                display: block !important;
+            }
+
+            header .gradient-bg>div>div:last-child {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+                display: block !important;
+                margin-top: 1rem !important;
+            }
+
+            /* Override all lg: classes */
+            header .gradient-bg>div>div {
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                align-items: stretch !important;
+            }
+
+            header .gradient-bg>div>div[class*="lg:"] {
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                align-items: stretch !important;
+            }
+        }
+
         @media (min-width: 1024px) {
             .sidebar {
                 transform: translateX(0);
@@ -1283,10 +1317,9 @@
         <header class="w-full mx-auto mb-8 sm:mb-16 fade-in">
             <div class="card glass-card p-6 sm:p-8 overflow-hidden relative">
                 <div class="gradient-bg p-4 sm:p-6 md:p-10 relative z-10">
-                    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
+                    <div class="flex flex-col items-start gap-6">
                         <!-- Profile Section -->
-                        <div
-                            class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-6 sm:gap-8 flex-1">
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 flex-1">
                             <div class="flex-shrink-0">
                                 <div class="relative float-animation">
                                     <div
@@ -1297,7 +1330,7 @@
                                         alt="Chandan Subedi - Backend Developer from Nepal" itemprop="image">
                                 </div>
                             </div>
-                            <div class="text-center sm:text-left lg:text-left">
+                            <div class="text-center sm:text-left">
                                 <div class="mb-2">
                                     <span class="text-xs uppercase tracking-wider text-blue-600 font-semibold">Software
                                         Developer</span>
@@ -1312,8 +1345,7 @@
                                         class="animate-pulse">|</span>
                                 </div>
                                 <p class="text-base text-gray-500 mb-4">Backend Developer & Data Analyst</p>
-                                <div
-                                    class="flex flex-wrap justify-center sm:justify-start lg:justify-start gap-1 sm:gap-2 mb-4">
+                                <div class="flex flex-wrap justify-center sm:justify-start gap-1 sm:gap-2 mb-4">
                                     <span
                                         class="skill-tag bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full">Django</span>
                                     <span
@@ -1329,7 +1361,7 @@
                                 </div>
 
                                 <div
-                                    class="flex flex-col sm:flex-row justify-center sm:justify-start lg:justify-start space-y-2 sm:space-y-0 sm:space-x-3">
+                                    class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-3">
                                     <a href="#contact" class="btn btn-primary text-center">
                                         <i class="fas fa-envelope mr-2"></i> Contact Me
                                     </a>
@@ -1341,7 +1373,7 @@
                         </div>
 
                         <!-- Terminal Section -->
-                        <div class="flex-shrink-0 w-full lg:w-auto lg:max-w-md">
+                        <div class="flex-shrink-0 w-full">
                             <div class="bg-gray-800 dark:bg-gray-900 p-3 sm:p-4 rounded-lg shadow-lg">
                                 <div class="flex items-center space-x-2 mb-3">
                                     <div class="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
